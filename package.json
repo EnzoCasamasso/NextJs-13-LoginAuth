@@ -20,11 +20,17 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+<<<<<<< HEAD
     "react-scroll": "^1.8.9",
     "typescript": "5.0.2"
   },
   "devDependencies": {
     "@types/react-scroll": "^1.8.6",
+=======
+    "typescript": "5.0.2"
+  },
+  "devDependencies": {
+>>>>>>> 86e57ed2a8d2b076ea21ef5ad4946449108f690a
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.0"

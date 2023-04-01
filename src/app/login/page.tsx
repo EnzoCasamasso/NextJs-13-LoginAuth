@@ -16,3 +16,10 @@ export default function Login() {
         </main>
     )
 }
+                <div>
+                    <Button label="Entrar" href="./"/>
+                </div>
+            </div>
+        </main>
+    )
+}
