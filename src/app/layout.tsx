@@ -15,7 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='pt-14' >
-        <Navbar buttons={["Home", "Sobre", "Dashboard"]}/>
+        <Navbar 
+          buttonsNav={[
+            {label: 'Home' , route: './'},
+            {label: 'Sobre', route: './sobre'},
+            {label: 'Dashboard', route: './dashboard'}
+          ]}/>
         {children}
         <Footer/>
       </body>

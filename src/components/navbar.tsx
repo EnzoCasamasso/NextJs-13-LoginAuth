@@ -3,9 +3,15 @@ import { useEffect, useState } from "react";
 import Button from "./buttonLink";
 import { HiOutlineMoon } from "react-icons/hi";
 import { BiSun } from "react-icons/bi";
+import Link from "next/link";
+
+type ButtonsNav = {
+  label: string
+  route: string          
+}
 
 type NavbarProps = {
-  buttons: string[]
+  buttonsNav: ButtonsNav[]
 }
 
 const handleScroll = (setHasScrolled: (value: boolean) => void) => {
@@ -15,7 +21,7 @@ const handleScroll = (setHasScrolled: (value: boolean) => void) => {
 }
 
 function Navbar({
-    buttons
+    buttonsNav
 }: NavbarProps) {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false)
   const [darkMode, setDarkmode] = useState<boolean>(false)
@@ -38,14 +44,17 @@ function Navbar({
         ${hasScrolled ? "shadow-md" : ""} duration-500`}
     >
       <div className="flex w-[100%] ml-52 space-x-14">
-      {buttons.map((button: string, key: number) => (
-        <button 
-          key={key}
-          className="hover:text-amber-400 duration-300 hover:bg-slate-200"
-        >
-            {button}
-        </button>
-      ))}
+      {buttonsNav && buttonsNav.map((buttons, key) => (
+        <Link key={key} href={buttons.route}>
+            <button 
+              key={key}
+              className="hover:text-amber-400 duration-300 hover:bg-slate-200"
+            >
+              {buttons.label}
+            </button>
+          
+        </Link>
+      ))} 
       </div>
       <div className="flex p-28 space-x-4">
         <button onClick={() => setDarkmode(!darkMode)}>

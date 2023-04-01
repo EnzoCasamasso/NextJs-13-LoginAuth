@@ -1,3 +1,5 @@
+"use client"
+import Button from '@mui/material/Button'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
